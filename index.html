@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>A Small Greeting ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Trebuchet MS", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .box {
+    padding: 25px;
+    max-width: 720px;
+  }
+
+  .open-btn {
+    padding: 15px 38px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    background: #ffcc70;
+    color: #000;
+    cursor: pointer;
+    animation: pulse 1.6s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+  }
+
+  .surprise {
+    display: none;
+    animation: fadeIn 1.8s forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  h1 {
+    font-size: 34px;
+    margin: 10px 0;
+  }
+
+  h2 {
+    font-size: 24px;
+    color: #ffe29a;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 19px;
+    line-height: 1.6;
+  }
+
+  .from {
+    margin-top: 28px;
+    font-size: 18px;
+    opacity: 0.95;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
+</audio>
+
+<div class="box" id="startBox">
+  <button class="open-btn" onclick="openSurprise()">🎁 Open Message</button>
+</div>
+
+<div class="box surprise" id="surpriseBox">
+  <h2>For My Old Friends 🤍</h2>
+  <p>
+    Waqt ke saath raaste badle,<br>
+    lekin dosti ki value kabhi kam nahi hui.<br><br>
+    Purani yaadein aur saath bitaya hua waqt<br>
+    hamesha dil ke kareeb rahega.
+  </p>
+
+  <br>
+
+  <h2>With Respect to<br>Rajiv Raushan Sir 🌸</h2>
+  <p>
+    Aapke guidance, discipline<br>
+    aur sikhaye gaye values ke liye<br>
+    dil se dhanyavaad.<br><br>
+    Naya saal aapke liye<br>
+    achha swasthya, shanti<br>
+    aur continued success le kar aaye.
+  </p>
+
+  <h1>✨ Happy New Year 2026 ✨</h1>
+
+  <div class="from">
+    With warm regards,<br>
+    <b>Prince Kumar</b>
+  </div>
+</div>
+
+<script>
+function openSurprise() {
+  document.getElementById("startBox").style.display = "none";
+  document.getElementById("surpriseBox").style.display = "block";
+  document.getElementById("bgMusic").play();
+}
+</script>
+
+</body>
+</html>
